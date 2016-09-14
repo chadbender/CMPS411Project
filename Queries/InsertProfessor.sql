@@ -25,4 +25,4 @@ INSERT INTO Professor
     ('Allanagh','Sewell','asewell@selu.edu'),
     ('James','Stutts','jsstutts@selu.edu'),
     ('Kuo-Pao','Yang','kyang@selu.edu'),
-    ('Mohamed','Zeidan','Mohamed.Zeidan@selu.edu')
+    ('Mohamed','Zeidan','Mohamed.Zeidan@selu.edu');

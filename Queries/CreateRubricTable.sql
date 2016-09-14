@@ -9,6 +9,4 @@ CREATE TABLE RubricTable
         NumOfStudSatisfied	int,
         PerfIndi1FK			int,
         MethOfAsses1		varchar(10000),
-	
-        
 );
