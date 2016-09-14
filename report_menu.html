@@ -1,0 +1,44 @@
+﻿<html>
+
+	<head>
+		<title>Reports Page</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />	
+	</head>
+	
+	<body bgcolor = "#FFFFFF">
+		<div align = "center">
+         <div style = "width:250px; border: solid 1px #333333; " align = "left">
+            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Report Menu</b></div>
+				
+            <div style = "margin:30px">
+			<b> Year Selected: 2016</b> <!--EXAMPLE - must pull year from db -->
+			<br />
+			<br />
+
+				<form action="./pi_table.html">
+					<input type="submit" value="Performance Indicator Table">
+				</form>
+				<br />
+				
+				<form action="./assignment_page.html">
+					<input type="submit" value="Assignment Menu">
+				</form>
+				<br />
+				
+				<form action="./professor_page.html">
+					<input type="submit" value="Professor Information">
+				</form>
+				<br />
+				
+				<form action="./year_menu.html">
+					<input type="submit" value="Go Back">
+				</form>
+				<div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
+					
+            </div>
+				
+         </div>
+			
+      </div>
+</body>
+</html>
