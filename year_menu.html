@@ -1,5 +1,8 @@
-<html>
 
+<html>
+<?php
+	include('session.php');
+?>
 	<head>
 		<title>Year Selection</title>
 		<link rel="stylesheet" type="text/css" href="style.css" />	
@@ -27,8 +30,8 @@
 				</form>
 				<br />
 				
-				<form action="./login.html">
-					<input type="submit" value="Go Back">
+				<form action="./login.php">
+					<input type="submit" value="Logout">
 				</form>
 				<div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
 					

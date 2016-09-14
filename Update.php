@@ -1,8 +1,8 @@
 <?php
    include('session.php');
-
    //echo $user_check;
    $newPassword = mysqli_real_escape_string($db,$_POST['passcode']);
+   echo $newPassword;
    $sql = "UPDATE admin set passcode = '$newPassword' WHERE username = '$user_check'";
    $result = mysqli_query($db,$sql);
    //$row = mysqli_fetch_assoc($result);
