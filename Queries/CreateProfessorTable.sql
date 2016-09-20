@@ -5,4 +5,4 @@ CREATE TABLE Professor
     LName			varchar(20),
     Email			varchar(40),
     PRIMARY KEY (ID)
-)
+);

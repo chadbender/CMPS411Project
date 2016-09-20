@@ -76,4 +76,4 @@ INSERT INTO CourseNumber
 	(593),
 	(594),
 	(595),
-	(691)
+	(691);

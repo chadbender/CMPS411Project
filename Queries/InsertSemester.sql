@@ -3,4 +3,4 @@ INSERT INTO Semester
 	VALUES
 	("Spring"),
 	("Fall"),
-	("Summer")
+	("Summer");

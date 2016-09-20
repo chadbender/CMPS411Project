@@ -4,4 +4,4 @@ CREATE TABLE SOandPI
     Outcome			char(1),
 	Indicator		varchar(400),
     PRIMARY KEY (ID)
-)
+);

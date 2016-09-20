@@ -4,4 +4,4 @@ CREATE TABLE LOGIN
 	UserName			varchar(20)			NOT NULL,
     PWord				varchar(20)			NOT NULL,
     primary key (ID)
-)
+);
