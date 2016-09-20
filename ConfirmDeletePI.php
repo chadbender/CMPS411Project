@@ -16,7 +16,7 @@
             <div style = "margin:30px">
 
 				<p>
-					<b>Performance Indicator being Edited:</b>
+					<center><b>Are you sure you want to delete this performance indicator?</b></center>
 				</p>
 
 				<style>
@@ -25,7 +25,6 @@
 					}
 				</style>
 				<p>
-				<form action = "SubmitEditPI.php" method = "post">
 					<?php
 						//gets ID
 						$TempID = mysqli_real_escape_string($db,$_POST['tempid']);
@@ -40,22 +39,19 @@
 							//echo "<tr><td>".$id."</td>";
 							echo "<td>".$outcome."</td>";
 							echo "<td>".$indicator."</td>";
-							//echo "<td><form action='EditPI.php' method='post'><input type='hidden' name='tempid' value='".$row['id']."'/><input type='submit' name='submit-btn' value='edit' /></form></td></tr>";
 						}
 						echo "</table>";
 						echo "\n";
 						echo "\n";
 					?>
-					<br>
-					<input type ="hidden" value = "<?php echo $id; ?>" name="ID" />
-						<label>Edit PI: </label><input type = "text" name = "EditPI" value="<?php echo $indicator; ?>" size="50"class = "box" /><br/><br />
-					<input type = "submit" value = " Submit "/><br />
-					</p>
+				</p>
+				<form action="DeletePI.php" method="post">
+					<input type="submit" value="Yes">
+					<input type="hidden" name="TempID" value="<?php echo $TempID; ?>">
 				</form>
-				
-			<form action="pi_table.php">
-				<input type="submit" value="Go Back">
-			</form>
+				<form action="pi_table.php">
+					<input type="submit" value="Go Back">
+				</form>
 				
 			<!--<div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
 			-->		
@@ -66,4 +62,3 @@
       </div>
 </body>
 </html>
-

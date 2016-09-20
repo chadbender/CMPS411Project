@@ -23,7 +23,7 @@
 
 				</p>
 
-				<form action="data_table.php" method="post">
+				<form method="post">
 					<p>
 					<b> Student Outcome:   </b>
 						
@@ -37,15 +37,19 @@
 							?>
 						</select>
 					</p>
-					<input type="submit" value="Generate">
+					<input type="submit" value="Edit/Add/Delete" formaction="data_table.php">
+					<p></p>
+					<input type="submit" value="Generate base Rubric" formaction="RunAppend.php">
+					
 				</form>
 				<!--<div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
-				-->
-				<br />
 				
+				<br />
+				-->
 				<form action="./report_menu.html">
 					<input type="submit" value="Go Back">
 				</form>
+				
 				<!--<div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
 				-->
             </div>

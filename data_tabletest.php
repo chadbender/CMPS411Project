@@ -7,15 +7,15 @@
 	
 	<body bgcolor = "#FFFFFF">
 		<div align = "center">
-         <div style = "width:700px; border: solid 1px #333333; " align = "left">
+         <div style = "width:500px; border: solid 1px #333333; " align = "left">
             <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Data Collection Table for Rubric * </b></div>
 				
             <div style = "margin:30px">
 
 				<p>
-					<b> Edit Performance Indicator(s)</b>
+					<b> WORK IN PROGRESS</b>
 				</p>
-
+				<br />
 				<style>
 					table, th, td {
 					border: 1px solid black;
@@ -29,29 +29,19 @@
 					//echo $OutcomeSelected;
 					$sql = "SELECT id,outcome,indicator FROM soandpi WHERE outcome='$OutcomeSelected'";
 					$result = mysqli_query($db,$sql);
-			
 					echo "<table>";
-						while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+						while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {							
 							$id = $row['id'];
 							$outcome   = $row['outcome'];
 							$indicator = $row['indicator'];
 							//echo "<tr><td>".$id."</td>";
 							echo "<td>".$outcome."</td>";
 							echo "<td>".$indicator."</td>";
-							echo "<td><form action='EditPI.php' method='post'><input type='hidden' name='tempid' value='".$row['id']."'/><input type='submit' name='submit-btn' value='edit' /></form></td>";
-							echo "<td><form action='ConfirmDeletePI.php' method='post'><input type='hidden' name='tempid' value='".$row['id']."'/><input type='submit' name='submit-btn' value='delete' /></form></td></tr>";
+							echo "<td><form action='EditPI.php' method='post'><input type='hidden' name='tempid' value='".$row['id']."'/><input type='submit' name='submit-btn' value='edit' /></form></td></tr>";
 						}
 					echo "</table>";
 				?>
-				
 				</p>
-				
-				<!-- When this button is pressed, it will submit the value of student outcome to SubmitNewPI which gives us a starting point for inserting a new row -->
-				<form action="CreateNewPI.php" method="post">
-					<input type="submit" value="Add New PI">
-					<input type="hidden" name="OutcomeSelected" value="<?php echo $OutcomeSelected; ?>">
-				</form>
-
 				<form action="./pi_table.php">
 					<input type="submit" value="Go Back">
 				</form>
