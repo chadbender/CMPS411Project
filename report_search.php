@@ -19,13 +19,13 @@
 					<b> Report Search </b>
 				</p>
 				
-				<form method ="post">
+				<form method ="post" action="./report_results.php">
 				
 					<p>
 					<b> Select Rubric:   </b>
 					<select name="SelectedRubric">
 						<?php
-						$sql1 = "SELECT StudentOutcome FROM assignedRubric";
+						$sql1 = "SELECT DISTINCT StudentOutcome FROM assignedRubric GROUP BY StudentOutcome";
 						$result1 = mysqli_query($db, $sql1);
 						while($row1 = mysqli_fetch_assoc($result1)){
 							echo '<option value='.$row1['StudentOutcome'].'>'.$row1['StudentOutcome'].'</option>';
@@ -38,12 +38,12 @@
 					<b> Select Class:   </b>
 					<select name="SelectedClass">
 						<?php
-						$sql2 = "SELECT courseNum FROM coursenumber
+						$sql2 = "SELECT courseNumber.ID,courseNum FROM coursenumber
 									INNER JOIN assignedRubric
-									ON assignedRubric.CourseNumberFK=coursenumber.ID";
+									ON assignedRubric.CourseNumberFK=coursenumber.ID GROUP BY courseNum";
 						$result2 = mysqli_query($db, $sql2);
 						while($row2 = mysqli_fetch_assoc($result2)){
-							echo '<option value='.$row2['courseNum'].'>'.$row2['courseNum'].'</option>';
+							echo '<option value='.$row2['ID'].'>'.$row2['courseNum'].'</option>';
 						}
 						?>
 					</select>
@@ -52,7 +52,7 @@
 					<b> Select Year:   </b>
 					<select name="SelectedYear">
 						<?php
-						$sql1 = "SELECT DISTINCT Yr FROM assignedRubric";
+						$sql1 = "SELECT DISTINCT Yr FROM assignedRubric GROUP BY Yr";
 						$result1 = mysqli_query($db, $sql1);
 						while($row1 = mysqli_fetch_assoc($result1)){
 							echo '<option value='.$row1['Yr'].'>'.$row1['Yr'].'</option>';
@@ -60,10 +60,9 @@
 						?>
 					</select>
 					</p>
-				</form>
-				
-				<form action="./report_results.php">
+					
 					<input type="submit" value="Search">
+					
 				</form>				
 				
 				<form action="./report_menu.html">
