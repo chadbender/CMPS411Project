@@ -25,8 +25,7 @@
 				<?php
 					include('session.php');
 
-					//$OutcomeSelected = mysqli_real_escape_string($db,$_POST['OutcomeSelected']);
-					//echo $OutcomeSelected;
+					
 					$sql = "SELECT ID,FName,LName,Email FROM professor";
 					$result = mysqli_query($db,$sql);
 			
@@ -36,12 +35,11 @@
 							$FName   = $row['FName'];
 							$LName = $row['LName'];
 							$Email = $row['Email'];
-							//echo "<tr><td>".$id."</td>";
 							echo "<td>".$FName."</td>";
 							echo "<td>".$LName."</td>";
 							echo "<td>".$Email."</td>";
-							echo "<td><form action='EditPI.php' method='post'><input type='hidden' name='tempid' value='".$row['ID']."'/><input type='submit' name='submit-btn' value='edit' /></form></td>";
-							echo "<td><form action='ConfirmDeletePI.php' method='post'><input type='hidden' name='tempid' value='".$row['ID']."'/><input type='submit' name='submit-btn' value='delete' /></form></td></tr>";
+							echo "<td><form action='EditProfessor.php' method='post'><input type='hidden' name='tempid' value='".$row['ID']."'/><input type='submit' name='submit-btn' value='edit' /></form></td>";
+							echo "<td><form action='ConfirmDeleteProfessor.php' method='post'><input type='hidden' name='tempid' value='".$row['ID']."'/><input type='submit' name='submit-btn' value='delete' /></form></td></tr>";
 						}
 					echo "</table>";
 					
@@ -49,15 +47,17 @@
 				
 				</p>
 				
-				<!-- When this button is pressed, it will submit the value of student outcome to SubmitNewPI which gives us a starting point for inserting a new row -->
 				
+				<form action="CreateNewProfessor.php" method="post">
+					<input type="submit" value="Add New Professor">
+					<input type="hidden" name="OutcomeSelected" value="<?php echo $OutcomeSelected; ?>">
+				</form>
 
 				<form action="./report_menu.html">
 					<input type="submit" value="Go Back">
 				</form>
 				
-			<!--<div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
-			-->		
+				
             </div>
 				
          </div>
