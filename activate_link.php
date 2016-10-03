@@ -25,28 +25,42 @@
 					}
 				</style>
 				<p>
-				
 				<form action = "SubmitEditPI.php" method = "post">
 					<?php
-						//gets ID
-						$TempID = mysqli_real_escape_string($db,$_POST['tempid']);
-						//echo $TempID;
-						$sql = "SELECT id,outcome,indicator FROM soandpi WHERE id='$TempID'";
-						$result = mysqli_query($db,$sql);
-						echo "<table>";
-						while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-							$id = $row['id'];
-							$outcome   = $row['outcome'];
-							$indicator = $row['indicator'];
-							//echo "<tr><td>".$id."</td>";
-							echo "<td>".$outcome."</td>";
-							echo "<td>".$indicator."</td>";
-							//echo "<td><form action='EditPI.php' method='post'><input type='hidden' name='tempid' value='".$row['id']."'/><input type='submit' name='submit-btn' value='edit' /></form></td></tr>";
-						}
-						echo "</table>";
-						echo "\n";
-						echo "\n";
-					?>
+					// retrieve token
+					if (isset($_GET["token"]) && preg_match('/^[0-9A-F]{40}$/i', $_GET["token"])) {
+						$token = $_GET["token"];
+					}
+					else {
+						throw new Exception("Valid token not provided.");
+					}
+
+					// verify token
+					$query = $db->prepare("SELECT username, tstamp FROM pending_users WHERE token = ?");
+					$query->execute(array($token));
+					$row = $query->fetch(PDO::FETCH_ASSOC);
+					$query->closeCursor();
+
+if ($row) {
+    extract($row);
+}
+else {
+    throw new Exception("Valid token not provided.");
+}
+
+// do one-time action here, like activating user account
+// ...
+
+// delete token so it can't be used again
+$query = $db->prepare(
+    "DELETE FROM pending_users WHERE username = ? AND token = ? AND tstamp = ?",
+);
+$query->execute(
+    array(
+        $username,
+        $token,
+        $tstamp));
+?>					
 					<br>
 					<input type ="hidden" value = "<?php echo $id; ?>" name="ID" />
 						<label>Edit PI: </label><input type = "text" name = "EditPI" value="<?php echo $indicator; ?>" size="50"class = "box" /><br/><br />

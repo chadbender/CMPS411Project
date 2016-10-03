@@ -26,22 +26,23 @@
 				</style>
 				<p>
 				
-				<form action = "SubmitEditPI.php" method = "post">
+				<form action = "SubmitEditProfessor.php" method = "post">
 					<?php
 						//gets ID
 						$TempID = mysqli_real_escape_string($db,$_POST['tempid']);
 						//echo $TempID;
-						$sql = "SELECT id,outcome,indicator FROM soandpi WHERE id='$TempID'";
+						$sql = "SELECT id,FName,LName,Email FROM Professor WHERE id='$TempID'";
 						$result = mysqli_query($db,$sql);
 						echo "<table>";
 						while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 							$id = $row['id'];
-							$outcome   = $row['outcome'];
-							$indicator = $row['indicator'];
+							$FName   = $row['FName'];
+							$LName = $row['LName'];
+							$Email = $row['Email'];
 							//echo "<tr><td>".$id."</td>";
-							echo "<td>".$outcome."</td>";
-							echo "<td>".$indicator."</td>";
-							//echo "<td><form action='EditPI.php' method='post'><input type='hidden' name='tempid' value='".$row['id']."'/><input type='submit' name='submit-btn' value='edit' /></form></td></tr>";
+							echo "<td>".$FName."</td>";
+							echo "<td>".$LName."</td>";
+							echo "<td>".$Email."</td>";
 						}
 						echo "</table>";
 						echo "\n";
@@ -49,12 +50,14 @@
 					?>
 					<br>
 					<input type ="hidden" value = "<?php echo $id; ?>" name="ID" />
-						<label>Edit PI: </label><input type = "text" name = "EditPI" value="<?php echo $indicator; ?>" size="50"class = "box" /><br/><br />
+						<label>Edit First Name: </label><input type = "text" name = "EditFName" value="<?php echo $FName; ?>" size="50"class = "box" /><br/><br />
+						<label>Edit Last Name: </label><input type = "text" name = "EditLName" value="<?php echo $LName; ?>" size="50"class = "box" /><br/><br />
+						<label>Edit Email: </label><input type = "text" name = "EditEmail" value="<?php echo $Email; ?>" size="50"class = "box" /><br/><br />
 					<input type = "submit" value = " Submit "/><br />
 					</p>
 				</form>
 				
-			<form action="pi_table.php">
+			<form action="professor_page.php">
 				<input type="submit" value="Go Back">
 			</form>
 				
@@ -67,4 +70,3 @@
       </div>
 </body>
 </html>
-

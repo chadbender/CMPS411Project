@@ -18,33 +18,27 @@
 					}
 				</style>
 				<p>
+				<?php
+					//Inserts the new Professor
+					include('session.php');
+					$FName = mysqli_real_escape_string($db,$_POST['FName']);
+					$LName = mysqli_real_escape_string($db,$_POST['LName']);
+					$Email = mysqli_real_escape_string($db,$_POST['Email']);
+					$sql2 = "INSERT INTO Professor (FName,LName,Email) VALUES ('$FName','$LName','$Email')";
+					$result2 = mysqli_query($db,$sql2);
+				?>
 				<b>
 				<?php
-					//Inserts the new Performance Indicator
-					include('session.php');
-					$TempID = mysqli_real_escape_string($db,$_POST['TempID']);
-					$sql1 = "SELECT ProfFK, AssignedrubricFK FROM assign WHERE ProfFK = '$TempID'";
-					$result1 = mysqli_query($db,$sql1);
-					$rowCount = mysqli_num_rows($result1);
-					IF($rowCount>0){
-						echo "Sorry, you can't delete the professor, this would result in an orphaned record.";
+   					If($result2=1){
+						echo "Professor was successfully added.";
 					}
-					ELSE {
-						$sql = "DELETE FROM professor WHERE ID='$TempID'";
-						$result = mysqli_query($db,$sql);
-						If($result=1){
-							echo "Professor was successfully deleted.";
-						}
-						else
-						{
-							echo "There was a problem deleting the professor.";
-						}
+					else
+					{
+						echo "There was a problem adding the Professor.";
 					}
 				?>
-			
 				</b>
 				</br>
-				</br>			
 				</p>
 				
 				<form action="professor_page.php">

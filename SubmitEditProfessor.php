@@ -5,19 +5,19 @@
 <html>
 
 	<head>
-		<title>Professor Information</title>
+		<title>Data Collection Table</title>
 		<link rel="stylesheet" type="text/css" href="style.css" />	
 	</head>
 	
 	<body bgcolor = "#FFFFFF">
 		<div align = "center">
          <div style = "width:500px; border: solid 1px #333333; " align = "left">
-            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Professor Information </b></div>
+            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Data Collection Table for Rubric * </b></div>
 				
             <div style = "margin:30px">
 
 				<p>
-					<b> Edit Professor Information</b>
+					<b> Edit Performance Indicator</b>
 				</p>
 
 				<style>
@@ -27,19 +27,21 @@
 				</style>
 				<p>
 					<?php
-						
+						//include('EditPI.php');
 
-						$EditProfessor = mysqli_real_escape_string($db,$_POST['EditProfessor']);
+						$EditFName = mysqli_real_escape_string($db,$_POST['EditFName']);
+						$EditLName = mysqli_real_escape_string($db,$_POST['EditLName']);
+						$EditEmail = mysqli_real_escape_string($db,$_POST['EditEmail']);
 						$ID = mysqli_real_escape_string($db,$_POST['ID']);
-						$sql = "UPDATE Professor SET email='$EditProfessor' WHERE ID='$ID'";
+						$sql = "UPDATE Professor SET FName='$EditFName', LName='$EditLName', Email='$EditEmail' WHERE ID='$ID'";
 						$result = mysqli_query($db,$sql);
    
 						If($result=1){
-							echo "Professor information was successfully updated.";
+							echo "Professor was successfully updated.";
 						}
 						else
 						{
-							echo "There was a problem updating the Professor information.";
+							echo "There was a problem updating the Professor.";
 						}
 					?>
 				</p>
@@ -47,6 +49,8 @@
 					<input type="submit" value="Go Back">
 				</form>
 				
+			<!--<div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
+			-->		
             </div>
 				
          </div>
