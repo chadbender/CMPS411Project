@@ -100,5 +100,5 @@ CREATE TABLE Assign
     PRIMARY KEY (token),
     foreign key (ProfFK) references Professor(ID),
     foreign key (AssignedRubricFK) references AssignedRubric(ID),
-    foreign key (CourseNumFKFK) references coursenumber(ID)
+    foreign key (CourseNumFK) references coursenumber(ID)
 );
