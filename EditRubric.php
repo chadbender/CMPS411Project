@@ -12,13 +12,10 @@
 	<body bgcolor = "#FFFFFF">
 		<div align = "center">
          <div style = "width:500px; border: solid 1px #333333; " align = "left">
-            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Data Collection Table for Rubric * </b></div>
+            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Edit Rubric</b></div>
 				
             <div style = "margin:30px">
 
-				<p>
-					<b> Edit Rubric</b>
-				</p>
 
 				<style>
 					table, th, td {
@@ -37,16 +34,15 @@
 
 					// verify token
 					
-					$query = "SELECT ProfFK, AssignedRubricFK, CourseNumFK, TimeStamp1 FROM assign WHERE token = '$token'";
+					$query = "SELECT FName, LName, CourseNum, ProfFK, AssignedRubricFK, CourseNumFK, TimeStamp1 FROM assign INNER JOIN professor ON professor.ID=assign.ProfFK INNER JOIN CourseNumber ON CourseNumber.ID=assign.CourseNumFK WHERE token = '$token'";
 					$result = mysqli_query($db,$query);
 					$row = mysqli_fetch_array($result);
 					$ProfFK = $row['ProfFK'];
+					$FName = $row['FName'];
+					$LName = $row['LName'];
 					$AssignedRubricFK = $row['AssignedRubricFK'];
-					$CourseNumFK = $row['CourseNumFK'];
+					$CourseNum = $row['CourseNum'];
 					
-					echo $ProfFK;
-					echo $AssignedRubricFK;
-					echo $CourseNumFK;
 					
 					$query1="SELECT 
 								assignedrubric.ID,assignedrubric.StudentOutcome,Department.Department,CourseNumber.CourseNum,semester.semester,Yr,
@@ -84,6 +80,11 @@
 					// do one-time action here, like activating a user account
 					
 				?>		
+				</p>
+				<p>
+				<label>Professor: </label><?php echo $FName; ?> &nbsp <?php echo $LName; ?> 
+				</br>
+				<label>Course Number: </label><?php echo $CourseNum; ?>
 				</p>
 				<!--
 				<form action="pi_table.php">

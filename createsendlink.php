@@ -10,14 +10,11 @@ include ('session.php');
 	
 	<body bgcolor = "#FFFFFF">
 		<div align = "center">
-         <div style = "width:350px; border: solid 1px #333333; " align = "left">
+         <div style = "width:500px; border: solid 1px #333333; " align = "left">
             <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Assignment Menu</b></div>
 				
             <div style = "margin:30px">
 			<form action="createsendlink.php" method="post">
-				<p>
-					<b> Assigned Rubric </b>
-				</p>
 				<p>
 				<b>
 				<?php
@@ -86,8 +83,8 @@ include ('session.php');
 							//generate url
 							
 							
-							$url = "localhost/Test/EditRubric.php?token=$token";
-							echo $url;
+							$url = "EditRubric.php?token=$token";
+							
 							
 							
 							
@@ -105,7 +102,11 @@ include ('session.php');
 						echo "You have already assigned rubric (".$StudentOutcome.") for ".$Dept." ".$CNumber." to ".$FName." ".$LName.".";
 					}					
 				?>
+				
 				</b>
+				</p>
+				<p>
+				<a href="<?php if(isset($url) && ($url!=null)){ echo $url;} else{ echo ""; }; ?>" target="_blank"><?php if(isset($url) && ($url!=null)){ echo $url;} else{ echo ""; }; ?></a>
 				</p>
 			</form>
 				<form action="assignment_page.php">

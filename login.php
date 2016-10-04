@@ -21,7 +21,7 @@
          
          $_SESSION['login_user'] = $myusername;
          
-         header("location: year_menu.html");
+         header("location: report_menu.html");
       }else {
          $error = "Your Login Name or Password is invalid";
       }

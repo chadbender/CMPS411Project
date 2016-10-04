@@ -16,7 +16,7 @@
             <div style = "margin:30px">
 
 				<p>
-					<b>Performance Indicator being Edited:</b>
+					<b>Professor being Edited:</b>
 				</p>
 
 				<style>
