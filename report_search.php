@@ -25,7 +25,7 @@
 					<b> Select Rubric:   </b>
 					<select name="SelectedRubric">
 						<?php
-						$sql1 = "SELECT DISTINCT StudentOutcome FROM assignedRubric GROUP BY StudentOutcome";
+						$sql1 = "SELECT DISTINCT StudentOutcome FROM assignedRubric";
 						$result1 = mysqli_query($db, $sql1);
 						while($row1 = mysqli_fetch_assoc($result1)){
 							echo '<option value='.$row1['StudentOutcome'].'>'.$row1['StudentOutcome'].'</option>';

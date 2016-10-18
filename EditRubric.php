@@ -34,7 +34,7 @@
 
 					// verify token
 					
-					$query = "SELECT FName, LName, CourseNum, ProfFK, AssignedRubricFK, CourseNumFK, TimeStamp1 FROM assign INNER JOIN professor ON professor.ID=assign.ProfFK INNER JOIN CourseNumber ON CourseNumber.ID=assign.CourseNumFK WHERE token = '$token'";
+					$query = "SELECT FName, LName, CourseNum, ProfFK, AssignedRubricFK, CourseNumFK FROM assign INNER JOIN professor ON professor.ID=assign.ProfFK INNER JOIN CourseNumber ON CourseNumber.ID=assign.CourseNumFK WHERE token = '$token'";
 					$result = mysqli_query($db,$query);
 					$row = mysqli_fetch_array($result);
 					$ProfFK = $row['ProfFK'];

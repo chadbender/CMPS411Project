@@ -102,3 +102,23 @@ CREATE TABLE Assign
     foreign key (AssignedRubricFK) references AssignedRubric(ID),
     foreign key (CourseNumFK) references coursenumber(ID)
 );
+CREATE TABLE CoursesToSos
+(
+		ID		int			not null	auto_increment,
+		Course		int,
+		a			tinyint(1),
+		b			tinyint(1),
+		c			tinyint(1),
+		d			tinyint(1),
+		e			tinyint(1),
+		f			tinyint(1),
+		g			tinyint(1),
+		h			tinyint(1),
+		i			tinyint(1),
+		j			tinyint(1),
+		k			tinyint(1),
+		l			tinyint(1),
+		m			tinyint(1),
+		n			tinyint(1),
+	PRIMARY KEY (ID)
+);
