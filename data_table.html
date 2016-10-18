@@ -1,32 +1,53 @@
 <html>
-
 	<head>
 		<title>Data Collection Table</title>
-		<link rel="stylesheet" type="text/css" href="style.css" />	
 	</head>
 	
-	<body bgcolor = "#FFFFFF">
-		<div align = "center">
-         <div style = "width:350px; border: solid 1px #333333; " align = "left">
-            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Data Collection Table for Rubric * </b></div>
-				
-            <div style = "margin:30px">
-
-				<p>
-					<b> WORK IN PROGRESS</b>
-				</p>
-				<br />
-				
-				<form action="./pi_table.html">
-					<input type="submit" value="Go Back">
-				</form>
-				
-			<div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
-					
-            </div>
-				
-         </div>
-			
-      </div>
-</body>
+	<body style = "min-width:1325px;">
+		<h2 style = "text-align: center;">Data Collection Table for Rubric *RUBRIC LETTER*</h2>
+		<h3 style = "text-align: center;">Student Outcome [*rubric letter*]</h3>
+		<div style = "width:190px; border: solid 2px #333333; text-align: center; float:left;"><b>Course:</div>
+		<div style = "width:477px; border: solid 2px #333333; text-align: center; float:left;"><b>*semester* Exit Exam (*course*)</div>
+		<div style = "width:220px; border: solid 2px #333333; text-align: center; float:left;"><b>Semester:</div>
+		<div style = "width:420px; border: solid 2px #333333; text-align: center; float:left;"><b>*semester*</div>
+		<div style = "width:330px; border: solid 2px #333333; text-align: center; float:left;"><b>Number of Students:</div>
+		<div style = "width:264px; border: solid 2px #333333; text-align: center; float:left;"><b>*number*</div>
+		<div style = "width:581px; border: solid 2px #333333; text-align: center; float:left;"><b>Number of Students who satisfied all performance indicators:</div>
+		<div style = "width:132px; border: solid 2px #333333; text-align: center; float:left;"><b>*number*</div>
+		
+		<div id = "wrapper">
+			<div style = "width:190px; height:40px; border: solid 2px #333333; text-align: center; float:left;"><b>Performance Indicator:</div>
+			<div style = "width:1125px; height:40px; border: solid 2px #333333; text-align: left; float:left; background-color: lightgray;"><b>*performance indicator*</div>
+			<div style = "width:190px; height:300px; border: solid 2px #333333; text-align: center; float:left;"><b>Methods of Assessment and Detailed Performance</div>
+			<textarea style = "width:1129px; height:304px; border: solid 2px #333333; text-align: left; float:left; font-family: Times New Roman; font-size: 15px;">Enter text here...</textarea>
+			<div style = "width:190px; height:80px; border: solid 2px #333333; text-align: center; float:left;"><b>Use of Results:</div>
+			<textarea style = "width:1129px; height:84px; border: solid 2px #333333; text-align: left; float:left; font-family: Times New Roman; font-size: 15px;">Enter text here...</textarea>
+		</div>
+		
+		<div id = "wrapper">
+			<div style = "width:190px; height:40px; border: solid 2px #333333; text-align: center; float:left;"><b>Performance Indicator:</div>
+			<div style = "width:1125px; height:40px; border: solid 2px #333333; text-align: left; float:left; background-color: lightgray;"><b>*performance indicator*</div>
+			<div style = "width:190px; height:300px; border: solid 2px #333333; text-align: center; float:left;"><b>Methods of Assessment and Detailed Performance</div>
+			<textarea style = "width:1129px; height:304px; border: solid 2px #333333; text-align: left; float:left; font-family: Times New Roman; font-size: 15px;">Enter text here...</textarea>
+			<div style = "width:190px; height:80px; border: solid 2px #333333; text-align: center; float:left;"><b>Use of Results:</div>
+			<textarea style = "width:1129px; height:84px; border: solid 2px #333333; text-align: left; float:left; font-family: Times New Roman; font-size: 15px;">Enter text here...</textarea>
+		</div>
+		
+		<div id = "wrapper">
+			<div style = "width:190px; height:40px; border: solid 2px #333333; text-align: center; float:left;"><b>Performance Indicator:</div>
+			<div style = "width:1125px; height:40px; border: solid 2px #333333; text-align: left; float:left; background-color: lightgray;"><b>*performance indicator*</div>
+			<div style = "width:190px; height:300px; border: solid 2px #333333; text-align: center; float:left;"><b>Methods of Assessment and Detailed Performance</div>
+			<textarea style = "width:1129px; height:304px; border: solid 2px #333333; text-align: left; float:left; font-family: Times New Roman; font-size: 15px;">Enter text here...</textarea>
+			<div style = "width:190px; height:80px; border: solid 2px #333333; text-align: center; float:left;"><b>Use of Results:</div>
+			<textarea style = "width:1129px; height:84px; border: solid 2px #333333; text-align: left; float:left; font-family: Times New Roman; font-size: 15px;">Enter text here...</textarea>
+		</div>
+		
+		<form action="./pi_table.html">
+			<br/>
+			<input type="submit" value="Go Back">
+			<br/>
+			<button type="button" onclick="alert('Changes Saved')">Save Changes</button>
+		</form>
+		
+	</body>
 </html>
