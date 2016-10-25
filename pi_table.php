@@ -9,8 +9,8 @@
 	</head>
 	
 	<body bgcolor = "#FFFFFF">
-		<div align = "center">
-         <div style = "width:350px; border: solid 1px #333333; " align = "left">
+		<div>
+         <div style = "width:600px; border: solid 1px #333333; ">
             <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Performance Indicator Table</b></div>
 				
             <div style = "margin:30px">
@@ -27,7 +27,7 @@
 					<p>
 					<b> Student Outcome:   </b>
 						
-						<select name="OutcomeSelected" id="outcome" style = "float:right">
+						<select name="OutcomeSelected" id="outcome" style = "float:center">
 							<?php
 								$sql = "SELECT DISTINCT outcome FROM soandpi";
 								$result = mysqli_query($db, $sql);
@@ -37,19 +37,18 @@
 							?>
 						</select>
 					</p>
-					<input type="submit" value="Edit/Add/Delete" style = "float:left" formaction="data_table.php">
+					<input type="submit" value="Edit/Add/Delete" style = "float:center" formaction="data_table.php">
 					<p></p>
-					<input type="submit" value="Generate base Rubric" style = "float:right" formaction="RunAppend.php">
+					<input type="submit" value="Generate base Rubric" style = "float:center" formaction="RunAppend.php">
 					
 				</form>
 				<!--<div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
 				
 				<br />
 				-->
-				<br>
-				<br>
+				
 				<form action="./report_menu.html">
-					<input type="submit" value="Go Back" style = "float:left">
+					<input type="submit" value="Go Back" style = "float:center">
 				</form>
 				
 				<!--<div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>

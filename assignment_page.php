@@ -9,19 +9,21 @@
 	</head>
 	
 	<body bgcolor = "#FFFFFF">
-		<div align = "center">
-         <div style = "width:350px; border: solid 1px #333333; " align = "left">
+		<div>
+         <div style = "width:600px; border: solid 1px #333333; ">
             <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Assignment Menu</b></div>
 				
             <div style = "margin:30px">
-			<form action="createsendlink.php" method="post">
+			<form action="createsendlink.php" method="post" >
 				<p>
 					<b> Rubric / Class / Professor Assignment </b>
 				</p>
 
 				<p>
+
 				<b> Select Rubric:   </b>
-				<select name="Rubric" style = "float:right">
+				
+				<select name="Rubric">
 					<?php
 					$sql = "SELECT StudentOutcome FROM baseRubric ORDER BY StudentOutcome ASC";
 					$result = mysqli_query($db,$sql);
@@ -34,7 +36,7 @@
 
 				<p>
 				<b> Select Department:    </b>
-				<select name="Department" style = "float:right">
+				<select name="Department">
 					<?php
 					$sql1 = "SELECT ID,department FROM department";
 					$result1 = mysqli_query($db,$sql1);
@@ -47,7 +49,7 @@
 				
 				<p>
 				<b> Select Course Number:    </b>
-				<select name="CNumber" style = "float:right">
+				<select name="CNumber">
 					<?php
 					$sql2 = "SELECT ID,CourseNum FROM coursenumber ORDER BY CourseNum";
 					$result2 = mysqli_query($db,$sql2);
@@ -60,7 +62,7 @@
 				
 				<p>
 				<b> Select Semester:    </b>
-				<select name="Semester" style = "float:right">
+				<select name="Semester">
 					<?php
 					$sql3 = "SELECT ID,semester FROM semester";
 					$result3 = mysqli_query($db,$sql3);
@@ -73,7 +75,7 @@
 				
 				<p>
 				<b> Select Professor:    </b>
-				<select name="Professor" style = "float:right">
+				<select name="Professor">
 					<?php
 					$sql4 = "SELECT ID,FName,LName,Email FROM Professor ORDER BY LName ASC";
 					$result4 = mysqli_query($db,$sql4);
@@ -84,12 +86,12 @@
 				</select>
 				</p>				
 
-				<input type ="submit" value="Assign" style = "float:right">
+				<input type ="submit" value="Assign" style = "float:center">
 				<!--<button type="button" onclick="alert('Data Saved and information sent to $email')">Save & Send</button> -->
 			</form>
 
 				<form action="./report_menu.html">
-					<input type="submit" value="Go Back">
+					<input type="submit" value="Go Back"  style = "float:center">
 				</form>
 				<!--<div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
 					-->	

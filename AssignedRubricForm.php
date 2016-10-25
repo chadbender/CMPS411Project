@@ -9,9 +9,9 @@
 	</head>
 	
 	<body bgcolor = "#FFFFFF">
-		<div align = "center">
-         <div style = "width:800px; border: solid 1px #333333; " align = "left">
-            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>RUBRIC</b></div>
+		<div>
+         <div style = "width:800px; border: solid 1px #333333; ">
+            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Rubric</b></div>
 				
             <div style = "margin:30px">
 

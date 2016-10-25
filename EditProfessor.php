@@ -9,9 +9,9 @@
 	</head>
 	
 	<body bgcolor = "#FFFFFF">
-		<div align = "center">
-         <div style = "width:500px; border: solid 1px #333333; " align = "left">
-            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Data Collection Table for Rubric * </b></div>
+		<div>
+         <div style = "width:600px; border: solid 1px #333333; ">
+            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Data Collection Table for Rubric</b></div>
 				
             <div style = "margin:30px">
 
@@ -25,7 +25,7 @@
 					}
 				</style>
 				<p>
-				
+				<center>
 				<form action = "SubmitEditProfessor.php" method = "post">
 					<?php
 						//gets ID
@@ -56,6 +56,7 @@
 					<input type = "submit" value = " Submit "/><br />
 					</p>
 				</form>
+				</center>
 				
 			<form action="professor_page.php">
 				<input type="submit" value="Go Back">

@@ -9,8 +9,8 @@
 	</head>
 	
 	<body bgcolor = "#FFFFFF">
-		<div align = "center">
-         <div style = "width:700px; border: solid 1px #333333; " align = "left">
+		<div>
+         <div style = "width:600px; border: solid 1px #333333; ">
             <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Report Menu</b></div>
 				
             <div style = "margin:30px">
@@ -31,8 +31,9 @@
 					   background-color:#fff;
 					}
 				</style>
-			<form>
 			<center>
+			<form>
+			
 			<?php
 				$TempId = mysqli_real_escape_string($db,$_POST['tempid']);
 				$sql = "SELECT id,course,a,b,c,d,e,f,g,h,i,j,k,l,m,n FROM CoursesToSOs WHERE id='$TempId'";
@@ -95,17 +96,16 @@
 					}
 				echo "</table>";
 			?>
-			</br>
-			<input type='submit' name='submit-btn' value='Submit'/>
-			
-			</br>
-			</br>
-			</form>
-			<form action="./CoursesToSos.php">
-				<input type="submit" value="Go Back">
-			</form>
 			</center>
-			<br />
+			</br>
+			<input type='submit' name='submit-btn' value='Submit' style = "float:right"/>
+			
+			</form>			
+			
+			<form action="./CoursesToSos.php">
+				<input type="submit" value="Go Back" style = "float:left">
+			</form>
+						
 			<br />
             </div>
 				

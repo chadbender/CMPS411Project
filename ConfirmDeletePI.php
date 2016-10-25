@@ -9,9 +9,9 @@
 	</head>
 	
 	<body bgcolor = "#FFFFFF">
-		<div align = "center">
-         <div style = "width:500px; border: solid 1px #333333; " align = "left">
-            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Data Collection Table for Rubric * </b></div>
+		<div>
+         <div style = "width:600px; border: solid 1px #333333; ">
+            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Data Collection Table for Rubric</b></div>
 				
             <div style = "margin:30px">
 
@@ -24,6 +24,7 @@
 					border: 1px solid black;
 					}
 				</style>
+				<center>
 				<p>
 					<?php
 						//gets ID
@@ -45,6 +46,7 @@
 						echo "\n";
 					?>
 				</p>
+				</center>
 				<form action="DeletePI.php" method="post">
 					<input type="submit" value="Yes">
 					<input type="hidden" name="TempID" value="<?php echo $TempID; ?>">

@@ -9,12 +9,11 @@
 	</head>
 	
 	<body bgcolor = "#FFFFFF">
-		<div align = "center">
-         <div style = "width:250px; border: solid 1px #333333; " align = "left">
+		<div>
+         <div style = "width:600px; border: solid 1px #333333; " >
             <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Report Menu</b></div>
 				
             <div style = "margin:30px">
-			<b> Year Selected: 2016</b> <!--EXAMPLE - must pull year from db -->
 			<br />
 			<br />
 
@@ -28,11 +27,6 @@
 				</form>
 				<br />
 				
-				<form action="CoursesToSOs.php">
-					<input type="submit" value="Courses to SOs">
-				</form>
-				<br />
-				
 				<form action="./professor_page.php">
 					<input type="submit" value="Professor Information">
 				</form>
@@ -43,9 +37,21 @@
 				</form>
 				<br />
 				
+				<form action="./data_table.html">
+					<input type="submit" value="Example Rubric">
+				</form>
+				<br />
+				
+				<form action="CoursesToSOs.php">
+					<input type="submit" value="Courses to SOs">
+				</form>
+				<br />
+				<br />
+				
 				<form action="./login.php">
 					<input type="submit" value="Logout">
 				</form>
+				
 				<div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
 					
             </div>

@@ -9,8 +9,8 @@
 	</head>
 	
 	<body bgcolor = "#FFFFFF">
-		<div align = "center">
-         <div style = "width:700px; border: solid 1px #333333; " align = "left">
+		<div>
+         <div style = "width:600px; border: solid 1px #333333; ">
             <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Report Menu</b></div>
 				
             <div style = "margin:30px">
@@ -95,11 +95,10 @@
 				echo "</table>";
 			?>
 			</br>
-			<input type='submit' name='submit-btn' value='Submit'/>
-			</br>
-			</br>
+			<input type='submit' name='submit-btn' value='Submit' style = "float:right"/>
+
 			<form action="./report_menu.html">
-				<input type="submit" value="Go Back">
+				<input type="submit" value="Go Back" style = "float:left">
 			</form>
 			</center>
 			<br />

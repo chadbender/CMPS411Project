@@ -53,17 +53,18 @@
    
    <body bgcolor = "#FFFFFF">
 	
-      <div align = "center">
-         <div style = "width:300px; border: solid 1px #333333; " align = "left">
+      <div>
+         <div style = "width:600px; border: solid 1px #333333; ">
             <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Login</b></div>
 				
             <div style = "margin:30px">
-               
+               <center>
                <form action = "" method = "post">
                   <label>Username  :</label><input type = "text" name = "username" class = "box"/><br /><br />
                   <label>Password  :</label><input type = "password" name = "password" class = "box" /><br/><br />
                   <input type = "submit" value = " Login "/><br />
                </form>
+			   </center>
                
                <!--<div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
 				-->

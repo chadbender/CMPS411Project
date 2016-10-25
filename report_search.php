@@ -9,8 +9,8 @@
 	</head>
 	
 	<body bgcolor = "#FFFFFF">
-		<div align = "center">
-		<div style = "width:350px; border: solid 1px #333333; " align = "left">
+		<div>
+		<div style = "width:600px; border: solid 1px #333333; ">
 			<div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Report Search</b></div>
 			
 			<div style = "margin:30px">
@@ -23,7 +23,7 @@
 				
 					<p>
 					<b> Select Rubric:   </b>
-					<select name="SelectedRubric" style = "float:right">
+					<select name="SelectedRubric">
 						<?php
 						$sql1 = "SELECT DISTINCT StudentOutcome FROM assignedRubric";
 						$result1 = mysqli_query($db, $sql1);
@@ -36,7 +36,7 @@
 					
 					<p>
 					<b> Select Class:   </b>
-					<select name="SelectedClass" style = "float:right">
+					<select name="SelectedClass">
 						<?php
 						$sql2 = "SELECT courseNumber.ID,courseNum FROM coursenumber
 									INNER JOIN assignedRubric
@@ -50,7 +50,7 @@
 					</p>
 					
 					<b> Select Year:   </b>
-					<select name="SelectedYear" style = "float:right">
+					<select name="SelectedYear">
 						<?php
 						$sql1 = "SELECT DISTINCT Yr FROM assignedRubric GROUP BY Yr";
 						$result1 = mysqli_query($db, $sql1);
@@ -61,13 +61,13 @@
 					</select>
 					</p>
 					
-					<input type="submit" style = "float:right" value="Search">
+					<input type="submit" style = "float:center" value="Search">
 					
 				</form>				
 				
 
 				<form action="./report_menu.html">
-					<input type="submit" style = "float:left" value="Go Back">
+					<input type="submit" style = "float:center" value="Go Back">
 					<br/>
 				</form>
 				

@@ -9,9 +9,9 @@
 	</head>
 	
 	<body bgcolor = "#FFFFFF">
-		<div align = "center">
-         <div style = "width:500px; border: solid 1px #333333; " align = "left">
-            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Data Collection Table for Rubric * </b></div>
+		<div>
+         <div style = "width:600px; border: solid 1px #333333; ">
+            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Data Collection Table for Rubric</b></div>
 				
             <div style = "margin:30px">
 
@@ -24,8 +24,8 @@
 					border: 1px solid black;
 					}
 				</style>
-				<p>
 				
+				<center>
 				<form action = "SubmitEditPI.php" method = "post">
 					<?php
 						//gets ID
@@ -47,16 +47,22 @@
 						echo "\n";
 						echo "\n";
 					?>
-					<br>
+					<br/>
+					
+					
 					<input type ="hidden" value = "<?php echo $id; ?>" name="ID" />
-						<label>Edit PI: </label><input type = "text" name = "EditPI" value="<?php echo $indicator; ?>" size="50"class = "box" /><br/><br />
-					<input type = "submit" value = " Submit "/><br />
-					</p>
+						<label>Edit PI: </label>
+						<input type = "text" name = "EditPI" value="<?php echo $indicator; ?>" size="50"class = "box" /><br/><br />
+					<input type = "submit" value = " Submit " style = "float:center"/>
+					
+					
 				</form>
+				</center>
+				<form action="pi_table.php">
+						<input type="submit" value="Go Back" style = "float:center">
+					</form>
 				
-			<form action="pi_table.php">
-				<input type="submit" value="Go Back">
-			</form>
+			
 				
 			<!--<div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
 			-->		

@@ -6,9 +6,9 @@
 	</head>
 	
 	<body bgcolor = "#FFFFFF">
-		<div align = "center">
-         <div style = "width:700px; border: solid 1px #333333; " align = "left">
-            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Data Collection Table for Rubric * </b></div>
+		<div>
+         <div style = "width:600px; border: solid 1px #333333; ">
+            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Data Collection Table for Rubric</b></div>
 				
             <div style = "margin:30px">
 
@@ -21,6 +21,7 @@
 					border: 1px solid black;
 					}
 				</style>
+				<center>
 				<p>
 				<?php
 					include('session.php');
@@ -45,16 +46,18 @@
 				?>
 				
 				</p>
+				<center/>
 				
 				<!-- When this button is pressed, it will submit the value of student outcome to SubmitNewPI which gives us a starting point for inserting a new row -->
 				<form action="CreateNewPI.php" method="post">
-					<input type="submit" value="Add New PI">
-					<input type="hidden" name="OutcomeSelected" value="<?php echo $OutcomeSelected; ?>">
+					<input type="submit" value="Add New PI" style = "float:right">
+					<input type="hidden" name="OutcomeSelected" value="<?php echo $OutcomeSelected; ?>" style = "float:center">
 				</form>
 
 				<form action="./pi_table.php">
-					<input type="submit" value="Go Back">
+					<input type="submit" value="Go Back" style = "float:left">
 				</form>
+				<br/>
 				
 			<!--<div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
 			-->		

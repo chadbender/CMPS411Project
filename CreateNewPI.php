@@ -9,9 +9,9 @@
 	</head>
 	
 	<body bgcolor = "#FFFFFF">
-		<div align = "center">
-         <div style = "width:500px; border: solid 1px #333333; " align = "left">
-            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Data Collection Table for Rubric * </b></div>
+		<div>
+         <div style = "width:600px; border: solid 1px #333333; ">
+            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Data Collection Table for Rubric</b></div>
 				
             <div style = "margin:30px">
 
@@ -32,7 +32,7 @@
 					
 				?>
 			<form action="SubmitNewPI.php" method="post">
-				<label>SO: &nbsp &nbsp  </label><label>New PI:</label>
+				<label style="float:left">&nbsp &nbsp &nbsp &nbsp SO: </label><label>New PI:</label>
 				</br>
 				<input type="text" name="OutcomeSelected" value="<?php echo $OutcomeSelected; ?>" size="1">
 				<input type="text" name="NewPI" size="50">
