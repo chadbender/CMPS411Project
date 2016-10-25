@@ -47,13 +47,13 @@
 				</center>
 				</p>
 
-				<br />
-				<form action="CreateNewProfessor.php">
-					<input type="submit" value="Add Professor">
-				</form>
 				<form action="./report_menu.html">
-					<input type="submit" value="Go Back">
+					<input type="submit" value="Go Back" style = "float:left">
 				</form>
+				<form action="CreateNewProfessor.php">
+					<input type="submit" value="Add Professor" style = "float:right">
+				</form>
+				<br />
 				<!--<div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
 					-->
             </div>

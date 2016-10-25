@@ -21,7 +21,7 @@
 
 				<p>
 				<b> Select Rubric:   </b>
-				<select name="Rubric">
+				<select name="Rubric" style = "float:right">
 					<?php
 					$sql = "SELECT StudentOutcome FROM baseRubric ORDER BY StudentOutcome ASC";
 					$result = mysqli_query($db,$sql);
@@ -34,7 +34,7 @@
 
 				<p>
 				<b> Select Department:    </b>
-				<select name="Department">
+				<select name="Department" style = "float:right">
 					<?php
 					$sql1 = "SELECT ID,department FROM department";
 					$result1 = mysqli_query($db,$sql1);
@@ -47,7 +47,7 @@
 				
 				<p>
 				<b> Select Course Number:    </b>
-				<select name="CNumber">
+				<select name="CNumber" style = "float:right">
 					<?php
 					$sql2 = "SELECT ID,CourseNum FROM coursenumber ORDER BY CourseNum";
 					$result2 = mysqli_query($db,$sql2);
@@ -60,7 +60,7 @@
 				
 				<p>
 				<b> Select Semester:    </b>
-				<select name="Semester">
+				<select name="Semester" style = "float:right">
 					<?php
 					$sql3 = "SELECT ID,semester FROM semester";
 					$result3 = mysqli_query($db,$sql3);
@@ -73,7 +73,7 @@
 				
 				<p>
 				<b> Select Professor:    </b>
-				<select name="Professor">
+				<select name="Professor" style = "float:right">
 					<?php
 					$sql4 = "SELECT ID,FName,LName,Email FROM Professor ORDER BY LName ASC";
 					$result4 = mysqli_query($db,$sql4);
@@ -84,7 +84,7 @@
 				</select>
 				</p>				
 
-				<input type ="submit" value="Assign">
+				<input type ="submit" value="Assign" style = "float:right">
 				<!--<button type="button" onclick="alert('Data Saved and information sent to $email')">Save & Send</button> -->
 			</form>
 

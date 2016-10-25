@@ -23,7 +23,7 @@
 				
 					<p>
 					<b> Select Rubric:   </b>
-					<select name="SelectedRubric">
+					<select name="SelectedRubric" style = "float:right">
 						<?php
 						$sql1 = "SELECT DISTINCT StudentOutcome FROM assignedRubric";
 						$result1 = mysqli_query($db, $sql1);
@@ -36,7 +36,7 @@
 					
 					<p>
 					<b> Select Class:   </b>
-					<select name="SelectedClass">
+					<select name="SelectedClass" style = "float:right">
 						<?php
 						$sql2 = "SELECT courseNumber.ID,courseNum FROM coursenumber
 									INNER JOIN assignedRubric
@@ -50,7 +50,7 @@
 					</p>
 					
 					<b> Select Year:   </b>
-					<select name="SelectedYear">
+					<select name="SelectedYear" style = "float:right">
 						<?php
 						$sql1 = "SELECT DISTINCT Yr FROM assignedRubric GROUP BY Yr";
 						$result1 = mysqli_query($db, $sql1);
@@ -61,12 +61,14 @@
 					</select>
 					</p>
 					
-					<input type="submit" value="Search">
+					<input type="submit" style = "float:right" value="Search">
 					
 				</form>				
 				
+
 				<form action="./report_menu.html">
-					<input type="submit" value="Go Back">
+					<input type="submit" style = "float:left" value="Go Back">
+					<br/>
 				</form>
 				
 			
