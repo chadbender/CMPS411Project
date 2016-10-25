@@ -15,13 +15,14 @@
 				
             <div style = "margin:30px">
 				<style>
-					table, th, td {
-					border: 1px solid black;
-					padding-top: 2px;
-					padding-right: 5px;
-					padding-bottom: 2px;
-					padding-left: 5px;
-					border-collapse: collapse;
+					table#t01, th, td {
+						border: 1px solid black;
+						padding-top: 2px;
+						padding-right: 5px;
+						padding-bottom: 2px;
+						padding-left: 5px;	
+						border-collapse: collapse;
+						
 					}
 					table#t01 tr:nth-child(even) {
 						background-color: #eee;
@@ -30,13 +31,14 @@
 					   background-color:#fff;
 					}
 				</style>
-			<form>
+			
 			<center>
 			<?php
 				$sql = "SELECT id,course,a,b,c,d,e,f,g,h,i,j,k,l,m,n FROM CoursesToSOs";
 				$result = mysqli_query($db,$sql);
 				
 				echo "<table id=\"t01\">";
+				
 				echo "<tr>";
 				echo "<th>Course</th>";
 				echo "<th>a</th>";
@@ -55,48 +57,51 @@
 				echo "<th>n</th>";
 				echo "</tr>";
 					while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-					$id = $row['id'];
-					$course = $row['course'];
-					$a   = $row['a'];
-					$b   = $row['b'];
-					$c   = $row['c'];
-					$d   = $row['d'];
-					$e   = $row['e'];
-					$f   = $row['f'];
-					$g   = $row['g'];
-					$h   = $row['h'];
-					$i   = $row['i'];
-					$j   = $row['j'];
-					$k   = $row['k'];
-					$l   = $row['l'];
-					$m   = $row['m'];
-					$n   = $row['n'];
-					//echo "<tr><td>".$id."</td>";
-					echo "<tr><td>".$course."</td>";
-					//echo "<td>".($row['a']==1 ? 'checked' : '')."</td>";
-					echo "<td><input type='checkbox' name='".$id."a'".($a==1 ? 'checked' : '')."/></td>";
-					//echo "<td>".$a."</td>";
-					echo "<td><input type='checkbox' name='".$id."b'".($b==1 ? 'checked' : '')."/></td>";
-					echo "<td>".$c."</td>";
-					echo "<td>".$d."</td>";
-					echo "<td>".$e."</td>";
-					echo "<td>".$f."</td>";
-					echo "<td>".$g."</td>";
-					echo "<td>".$h."</td>";
-					echo "<td>".$i."</td>";
-					echo "<td>".$j."</td>";
-					echo "<td>".$k."</td>";
-					echo "<td>".$l."</td>";
-					echo "<td>".$m."</td>";
-					echo "<td>".$n."</td></tr>";
+						$id = $row['id'];
+						$course = $row['course'];
+						$a   = $row['a'];
+						$b   = $row['b'];
+						$c   = $row['c'];
+						$d   = $row['d'];
+						$e   = $row['e'];
+						$f   = $row['f'];
+						$g   = $row['g'];
+						$h   = $row['h'];
+						$i   = $row['i'];
+						$j   = $row['j'];
+						$k   = $row['k'];
+						$l   = $row['l'];
+						$m   = $row['m'];
+						$n   = $row['n'];
+						
+						echo "<tr><td>".$course."</td>";
+						echo "<td>".($a==1 ? 'X' : '')."</td>";
+						echo "<td>".($b==1 ? 'X' : '')."</td>";
+						echo "<td>".($c==1 ? 'X' : '')."</td>";
+						echo "<td>".($d==1 ? 'X' : '')."</td>";
+						echo "<td>".($e==1 ? 'X' : '')."</td>";
+						echo "<td>".($f==1 ? 'X' : '')."</td>";
+						echo "<td>".($g==1 ? 'X' : '')."</td>";
+						echo "<td>".($h==1 ? 'X' : '')."</td>";
+						echo "<td>".($i==1 ? 'X' : '')."</td>";
+						echo "<td>".($j==1 ? 'X' : '')."</td>";
+						echo "<td>".($k==1 ? 'X' : '')."</td>";
+						echo "<td>".($l==1 ? 'X' : '')."</td>";
+						echo "<td>".($m==1 ? 'X' : '')."</td>";
+						echo "<td>".($n==1 ? 'X' : '')."</td>";
+						//echo "<td><form><input type='textarea'></form></td></tr>";
+						echo "<td><form action='EditCourseToSos.php' method='post'><input type='hidden' name='tempid' value='".$row['id']."'/><input type='submit' name='submit-btn' value='edit' /></form></td></tr>";
 					}
 				echo "</table>";
 			?>
 			</br>
 			<input type='submit' name='submit-btn' value='Submit'/>
-			</center>
-			
+			</br>
+			</br>
+			<form action="./report_menu.html">
+				<input type="submit" value="Go Back">
 			</form>
+			</center>
 			<br />
 			<br />
             </div>
