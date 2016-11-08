@@ -60,17 +60,11 @@
 						?>
 					</select>
 					</p>
-					
-					<input type="submit" style = "float:center" value="Search">
-					
-				</form>				
-				
-
-				<form action="./report_menu.html">
-					<input type="submit" style = "float:center" value="Go Back">
-					<br/>
-				</form>
-				
+					<br />
+					<input type="submit" style = "float:right" value="Search">
+					<input type="submit" style = "float:left" value="Go Back" formaction="./report_menu.html">
+					<br />
+				</form>					
 			
             </div>
 				

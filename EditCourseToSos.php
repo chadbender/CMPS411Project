@@ -4,14 +4,14 @@
 <html>
 
 	<head>
-		<title>Reports Page</title>
+		<title>Edit Mapping Row</title>
 		<link rel="stylesheet" type="text/css" href="style.css" />	
 	</head>
 	
 	<body bgcolor = "#FFFFFF">
 		<div>
          <div style = "width:600px; border: solid 1px #333333; ">
-            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Report Menu</b></div>
+            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Edit Row</b></div>
 				
             <div style = "margin:30px">
 				<style>
@@ -104,9 +104,10 @@
 			
 			<form action="./CoursesToSos.php">
 				<input type="submit" value="Go Back" style = "float:left">
+				<br />
 			</form>
 						
-			<br />
+			
             </div>
 				
          </div>

@@ -4,14 +4,14 @@
 <html>
 
 	<head>
-		<title>Reports Page</title>
+		<title>Courses to Student Outcomes Mapping</title>
 		<link rel="stylesheet" type="text/css" href="style.css" />	
 	</head>
 	
 	<body bgcolor = "#FFFFFF">
 		<div>
          <div style = "width:600px; border: solid 1px #333333; ">
-            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Report Menu</b></div>
+            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Courses to Student Outcomes Mapping</b></div>
 				
             <div style = "margin:30px">
 				<style>
@@ -94,15 +94,15 @@
 					}
 				echo "</table>";
 			?>
+			</center>
 			</br>
 			<input type='submit' name='submit-btn' value='Submit' style = "float:right"/>
 
 			<form action="./report_menu.html">
 				<input type="submit" value="Go Back" style = "float:left">
-			</form>
-			</center>
-			<br />
-			<br />
+				<br />
+			</form>			
+			
             </div>
 				
          </div>

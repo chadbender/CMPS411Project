@@ -4,14 +4,14 @@
 <html>
 
 	<head>
-		<title>Data Collection Table</title>
+		<title>Edit PI</title>
 		<link rel="stylesheet" type="text/css" href="style.css" />	
 	</head>
 	
 	<body bgcolor = "#FFFFFF">
 		<div>
          <div style = "width:600px; border: solid 1px #333333; ">
-            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Data Collection Table for Rubric</b></div>
+            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Edit PI</b></div>
 				
             <div style = "margin:30px">
 
@@ -47,22 +47,17 @@
 						echo "\n";
 						echo "\n";
 					?>
-					<br/>
 					
+					</center>
 					
 					<input type ="hidden" value = "<?php echo $id; ?>" name="ID" />
 						<label>Edit PI: </label>
-						<input type = "text" name = "EditPI" value="<?php echo $indicator; ?>" size="50"class = "box" /><br/><br />
-					<input type = "submit" value = " Submit " style = "float:center"/>
-					
-					
-				</form>
-				</center>
-				<form action="pi_table.php">
-						<input type="submit" value="Go Back" style = "float:center">
-					</form>
-				
-			
+						<input type = "text" name = "EditPI" value="<?php echo $indicator; ?>" size="50"class = "box" />
+						<br/><br /><br />
+					<input type = "submit" value = " Submit " style = "float:right"/>
+					<input type="submit" value="Go Back" style = "float:left" formaction="pi_table.php">
+					<br />
+				</form>			
 				
 			<!--<div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
 			-->		

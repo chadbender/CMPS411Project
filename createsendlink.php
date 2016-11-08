@@ -4,14 +4,14 @@ include ('session.php');
 <html>
 
 	<head>
-		<title>Assignment Menu</title>
+		<title>Create Link</title>
 		<link rel="stylesheet" type="text/css" href="style.css" />	
 	</head>
 	
 	<body bgcolor = "#FFFFFF">
 		<div>
          <div style = "width:600px; border: solid 1px #333333; ">
-            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Assignment Menu</b></div>
+            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Assignment</b></div>
 				
             <div style = "margin:30px">
 			<form action="createsendlink.php" method="post">

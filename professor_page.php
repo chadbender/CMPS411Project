@@ -1,7 +1,7 @@
 <html>
 
 	<head>
-		<title>Professor Assignment Page</title>
+		<title>Professor Information Page</title>
 		<link rel="stylesheet" type="text/css" href="style.css" />	
 	</head>
 	

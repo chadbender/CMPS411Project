@@ -4,14 +4,14 @@
 <html>
 
 	<head>
-		<title>Data Collection Table</title>
+		<title>Edit Professor</title>
 		<link rel="stylesheet" type="text/css" href="style.css" />	
 	</head>
 	
 	<body bgcolor = "#FFFFFF">
 		<div>
          <div style = "width:600px; border: solid 1px #333333; ">
-            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Data Collection Table for Rubric</b></div>
+            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Edit Professor</b></div>
 				
             <div style = "margin:30px">
 
@@ -53,14 +53,13 @@
 						<label>Edit First Name: </label><input type = "text" name = "EditFName" value="<?php echo $FName; ?>" size="50"class = "box" /><br/><br />
 						<label>Edit Last Name: </label><input type = "text" name = "EditLName" value="<?php echo $LName; ?>" size="50"class = "box" /><br/><br />
 						<label>Edit Email: </label><input type = "text" name = "EditEmail" value="<?php echo $Email; ?>" size="50"class = "box" /><br/><br />
-					<input type = "submit" value = " Submit "/><br />
-					</p>
+					<input type = "submit" value = " Submit " style = "float:right"/>					
+					<input type="submit" value="Go Back" style = "float:left" formaction="professor_page.php">
+					<br />
 				</form>
 				</center>
 				
-			<form action="professor_page.php">
-				<input type="submit" value="Go Back">
-			</form>
+
 				
 			<!--<div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
 			-->		

@@ -1,18 +1,17 @@
 <html>
 	<head>
-		<title></title>
+		<title>Create SO</title>
 		<link rel="stylesheet" type="text/css" href="style.css" />	
 	</head>
 	
 	<body bgcolor = "#FFFFFF">
 		<div>
          <div style = "width:600px; border: solid 1px #333333; ">
-            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Performance Indicator Table</b></div>
+            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Create Student Outcome</b></div>
 				
             <div style = "margin:30px">
 
 				<p>
-					<b> 2016 > PI Table</b>
 				</p>
 
 				<p><b>

@@ -4,14 +4,14 @@
 <html>
 
 	<head>
-		<title>Data Collection Table</title>
+		<title>Delete PI Confirm</title>
 		<link rel="stylesheet" type="text/css" href="style.css" />	
 	</head>
 	
 	<body bgcolor = "#FFFFFF">
 		<div>
          <div style = "width:600px; border: solid 1px #333333; ">
-            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Data Collection Table for Rubric</b></div>
+            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Delete PI</b></div>
 				
             <div style = "margin:30px">
 
@@ -47,13 +47,15 @@
 					?>
 				</p>
 				</center>
+				<p><br /></p>
 				<form action="DeletePI.php" method="post">
-					<input type="submit" value="Yes">
+					<input type="submit" value="Yes" style = "float:right">
 					<input type="hidden" name="TempID" value="<?php echo $TempID; ?>">
 				</form>
 				<form action="pi_table.php">
-					<input type="submit" value="Go Back">
+					<input type="submit" value="Go Back" style = "float:left">
 				</form>
+				<br />
 				
 			<!--<div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
 			-->		

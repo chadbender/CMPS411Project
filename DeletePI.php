@@ -1,14 +1,14 @@
 <html>
 
 	<head>
-		<title>Data Collection Table</title>
+		<title>Delete PI</title>
 		<link rel="stylesheet" type="text/css" href="style.css" />	
 	</head>
 	
 	<body bgcolor = "#FFFFFF">
 		<div>
          <div style = "width:600px; border: solid 1px #333333; ">
-            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Data Collection Table for Rubric</b></div>
+            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Delete PI</b></div>
 				
             <div style = "margin:30px">
 

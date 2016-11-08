@@ -15,9 +15,7 @@
 				
             <div style = "margin:30px">
 
-				<p>
-					<b> 2016 > PI Table</b>
-				</p>
+				<p></p>
 
 				<p>
 
@@ -38,8 +36,11 @@
 						</select>
 					</p>
 					<input type="submit" value="Edit/Add/Delete" style = "float:center" formaction="data_table.php">
-					<p></p>
-					<input type="submit" value="Generate base Rubric" style = "float:center" formaction="RunAppend.php">
+					<br />
+					<br />
+					<input type="submit" value="Generate base Rubric" style = "float:right" formaction="RunAppend.php">						
+					<input type="submit" value="Go Back" style = "float:left" formaction="./report_menu.html">
+					<br />
 					
 				</form>
 				<!--<div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
@@ -47,9 +48,7 @@
 				<br />
 				-->
 				
-				<form action="./report_menu.html">
-					<input type="submit" value="Go Back" style = "float:center">
-				</form>
+				
 				
 				<!--<div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
 				-->

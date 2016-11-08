@@ -85,14 +85,13 @@
 					?>
 				</select>
 				</p>				
-
-				<input type ="submit" value="Assign" style = "float:center">
+				
+				<br />
+				<input type ="submit" value="Assign" style = "float:right">
+				<input type="submit" value="Go Back"  style = "float:left" formaction="./report_menu.html">
+				<br />
 				<!--<button type="button" onclick="alert('Data Saved and information sent to $email')">Save & Send</button> -->
 			</form>
-
-				<form action="./report_menu.html">
-					<input type="submit" value="Go Back"  style = "float:center">
-				</form>
 				<!--<div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
 					-->	
             </div>
