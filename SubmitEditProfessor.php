@@ -1,12 +1,12 @@
 
 <?php
-   include('session.php');
+   include('Session.php');
 ?>
 <html>
 
 	<head>
 		<title>Professor Edit Submitted</title>
-		<link rel="stylesheet" type="text/css" href="style.css" />	
+		<link rel="stylesheet" type="text/css" href="Style.css" />	
 	</head>
 	
 	<body bgcolor = "#FFFFFF">
@@ -45,7 +45,7 @@
 						}
 					?>
 				</p>
-				<form action="professor_page.php">
+				<form action="ProfessorPage.php">
 					<input type="submit" value="Go Back">
 				</form>
 				

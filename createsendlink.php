@@ -1,11 +1,11 @@
 <?php
-include ('session.php');
+include ('Session.php');
 ?>
 <html>
 
 	<head>
 		<title>Create Link</title>
-		<link rel="stylesheet" type="text/css" href="style.css" />	
+		<link rel="stylesheet" type="text/css" href="Style.css" />	
 	</head>
 	
 	<body bgcolor = "#FFFFFF">
@@ -109,7 +109,7 @@ include ('session.php');
 				<a href="<?php if(isset($url) && ($url!=null)){ echo $url;} else{ echo ""; }; ?>" target="_blank"><?php if(isset($url) && ($url!=null)){ echo $url;} else{ echo ""; }; ?></a>
 				</p>
 			</form>
-				<form action="assignment_page.php">
+				<form action="AssignmentPage.php">
 					<input type="submit" value="Go Back">
 				</form>
 				<!--<div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>

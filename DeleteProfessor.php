@@ -2,7 +2,7 @@
 
 	<head>
 		<title>Professor Deleted</title>
-		<link rel="stylesheet" type="text/css" href="style.css" />	
+		<link rel="stylesheet" type="text/css" href="Style.css" />	
 	</head>
 	
 	<body bgcolor = "#FFFFFF">
@@ -47,7 +47,7 @@
 				</br>			
 				</p>
 				
-				<form action="professor_page.php">
+				<form action="ProfessorPage.php">
 					<input type="submit" value="Go Back">
 				</form>
 				

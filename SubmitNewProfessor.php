@@ -2,7 +2,7 @@
 
 	<head>
 		<title>Submit Professor</title>
-		<link rel="stylesheet" type="text/css" href="style.css" />	
+		<link rel="stylesheet" type="text/css" href="Style.css" />	
 	</head>
 	
 	<body bgcolor = "#FFFFFF">
@@ -20,7 +20,7 @@
 				<p>
 				<?php
 					//Inserts the new Professor
-					include('session.php');
+					include('Session.php');
 					$FName = mysqli_real_escape_string($db,$_POST['FName']);
 					$LName = mysqli_real_escape_string($db,$_POST['LName']);
 					$Email = mysqli_real_escape_string($db,$_POST['Email']);
@@ -41,7 +41,7 @@
 				</br>
 				</p>
 				
-				<form action="professor_page.php">
+				<form action="ProfessorPage.php">
 					<input type="submit" value="Go Back">
 				</form>
 				

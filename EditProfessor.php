@@ -1,11 +1,11 @@
 <?php
-   include('session.php');
+   include('Session.php');
 ?>
 <html>
 
 	<head>
 		<title>Edit Professor</title>
-		<link rel="stylesheet" type="text/css" href="style.css" />	
+		<link rel="stylesheet" type="text/css" href="Style.css" />	
 	</head>
 	
 	<body bgcolor = "#FFFFFF">
@@ -54,7 +54,7 @@
 						<label>Edit Last Name: </label><input type = "text" name = "EditLName" value="<?php echo $LName; ?>" size="50"class = "box" /><br/><br />
 						<label>Edit Email: </label><input type = "text" name = "EditEmail" value="<?php echo $Email; ?>" size="50"class = "box" /><br/><br />
 					<input type = "submit" value = " Submit " style = "float:right"/>					
-					<input type="submit" value="Go Back" style = "float:left" formaction="professor_page.php">
+					<input type="submit" value="Go Back" style = "float:left" formaction="ProfessorPage.php">
 					<br />
 				</form>
 				</center>

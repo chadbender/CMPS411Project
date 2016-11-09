@@ -1,11 +1,11 @@
 <?php
-   include('session.php');
+   include('Session.php');
 ?>
 <html>
 
 	<head>
 		<title>Create New Professor</title>
-		<link rel="stylesheet" type="text/css" href="style.css" />	
+		<link rel="stylesheet" type="text/css" href="Style.css" />	
 	</head>
 	
 	<body bgcolor = "#FFFFFF">
@@ -41,7 +41,7 @@
 				</br>
 				</br>
 				<input type="submit" value="Create New Professor" style="float:right">
-				<input type="submit" value="Go Back" style="float:left" formaction="professor_page.php">
+				<input type="submit" value="Go Back" style="float:left" formaction="ProfessorPage.php">
 				<br />
 			</form>
 				

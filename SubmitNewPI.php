@@ -2,7 +2,7 @@
 
 	<head>
 		<title>Data Collection Table</title>
-		<link rel="stylesheet" type="text/css" href="style.css" />	
+		<link rel="stylesheet" type="text/css" href="Style.css" />	
 	</head>
 	
 	<body bgcolor = "#FFFFFF">
@@ -67,7 +67,7 @@
 				
 				</p>
 				
-				<form action="pi_table.php">
+				<form action="PITable.php">
 					<input type="submit" value="Go Back">
 				</form>
 				

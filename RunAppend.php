@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<title>Create SO</title>
-		<link rel="stylesheet" type="text/css" href="style.css" />	
+		<link rel="stylesheet" type="text/css" href="Style.css" />	
 	</head>
 	
 	<body bgcolor = "#FFFFFF">
@@ -16,7 +16,7 @@
 
 				<p><b>
 				<?php
-				include('session.php');
+				include('Session.php');
 				//Check if the baseRubric for outcome has already been created
 				$OutcomeSelected = mysqli_real_escape_string($db,$_POST['OutcomeSelected']);
 				$sql = "SELECT StudentOutcome FROM baseRubric WHERE StudentOutcome='$OutcomeSelected'";
@@ -61,7 +61,7 @@
 				
 				<br />
 				-->
-				<form action="pi_table.php">
+				<form action="PITable.php">
 					<input type="submit" value="Go Back">
 				</form>
 				

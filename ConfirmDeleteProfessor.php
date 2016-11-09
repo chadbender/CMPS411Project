@@ -1,11 +1,11 @@
 <?php
-   include('session.php');
+   include('Session.php');
 ?>
 <html>
 
 	<head>
 		<title>Delete Professor Confirm</title>
-		<link rel="stylesheet" type="text/css" href="style.css" />	
+		<link rel="stylesheet" type="text/css" href="Style.css" />	
 	</head>
 	
 	<body bgcolor = "#FFFFFF">
@@ -56,7 +56,7 @@
 					<input type="submit" value="Yes" style="float:right">
 					<input type="hidden" name="TempID" value="<?php echo $TempID; ?>">
 				</form>
-				<form action="professor_page.php">
+				<form action="ProfessorPage.php">
 					<input type="submit" value="Go Back" style="float:left">
 					<br />
 				</form>

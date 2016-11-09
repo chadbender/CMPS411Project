@@ -1,11 +1,11 @@
 <?php
-   include('session.php');
+   include('Session.php');
 ?>
 <html>
 
 	<head>
 		<title>Create New PI</title>
-		<link rel="stylesheet" type="text/css" href="style.css" />	
+		<link rel="stylesheet" type="text/css" href="Style.css" />	
 	</head>
 	
 	<body bgcolor = "#FFFFFF">
@@ -40,7 +40,7 @@
 				</br>
 				<br />
 				<input type="submit" value="Create New PI" style = "float:right">
-				<input type="submit" value="Go Back" style = "float:left" formaction="pi_table.php">
+				<input type="submit" value="Go Back" style = "float:left" formaction="PITable.php">
 				<br />
 			</form>
 			

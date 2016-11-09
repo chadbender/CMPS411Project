@@ -1,11 +1,11 @@
 <?php
-	include('session.php');
+	include('Session.php');
 ?>
 <html>
 
 	<head>
 		<title>Courses to Student Outcomes Mapping</title>
-		<link rel="stylesheet" type="text/css" href="style.css" />	
+		<link rel="stylesheet" type="text/css" href="Style.css" />	
 	</head>
 	
 	<body bgcolor = "#FFFFFF">
@@ -98,7 +98,7 @@
 			</br>
 			<input type='submit' name='submit-btn' value='Submit' style = "float:right"/>
 
-			<form action="./report_menu.html">
+			<form action="./ReportMenu.html">
 				<input type="submit" value="Go Back" style = "float:left">
 				<br />
 			</form>			

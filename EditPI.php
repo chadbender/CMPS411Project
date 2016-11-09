@@ -1,11 +1,11 @@
 <?php
-   include('session.php');
+   include('Session.php');
 ?>
 <html>
 
 	<head>
 		<title>Edit PI</title>
-		<link rel="stylesheet" type="text/css" href="style.css" />	
+		<link rel="stylesheet" type="text/css" href="Style.css" />	
 	</head>
 	
 	<body bgcolor = "#FFFFFF">
@@ -55,7 +55,7 @@
 						<input type = "text" name = "EditPI" value="<?php echo $indicator; ?>" size="50"class = "box" />
 						<br/><br /><br />
 					<input type = "submit" value = " Submit " style = "float:right"/>
-					<input type="submit" value="Go Back" style = "float:left" formaction="pi_table.php">
+					<input type="submit" value="Go Back" style = "float:left" formaction="PITable.php">
 					<br />
 				</form>			
 				

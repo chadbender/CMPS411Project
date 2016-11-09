@@ -1,12 +1,12 @@
 <?php
-	include('config.php');
+	include('Config.php');
 	session_start();
 ?>
 <html>
 
 	<head>
 		<title>Data Collection Table</title>
-		<link rel="stylesheet" type="text/css" href="style.css" />	
+		<link rel="stylesheet" type="text/css" href="Style.css" />	
 	</head>
 	
 	<body bgcolor = "#FFFFFF">

@@ -1,5 +1,5 @@
 <?php
-   include('config.php');
+   include('Config.php');
    session_start();
    
    $user_check = $_SESSION['login_user'];
@@ -11,6 +11,6 @@
    $login_session = $row['username'];
    //echo $login_session;
    if(!isset($_SESSION['login_user'])){
-      header("location:login.php");
+      header("location:Login.php");
    }
 ?>

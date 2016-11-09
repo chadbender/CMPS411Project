@@ -1,11 +1,11 @@
 <?php
-	include('session.php');
+	include('Session.php');
 ?>
 <html>
 
 	<head>
 		<title>Edit Mapping Row</title>
-		<link rel="stylesheet" type="text/css" href="style.css" />	
+		<link rel="stylesheet" type="text/css" href="Style.css" />	
 	</head>
 	
 	<body bgcolor = "#FFFFFF">

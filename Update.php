@@ -1,5 +1,5 @@
 <?php
-   include('session.php');
+   include('Session.php');
    //echo $user_check;
    $newPassword = mysqli_real_escape_string($db,$_POST['passcode']);
    echo $newPassword;
