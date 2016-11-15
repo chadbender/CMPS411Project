@@ -86,12 +86,55 @@
 				$UseOfResult5 = $row1['UseOfResult5'];
 				$UseOfResult6 = $row1['UseOfResult6'];
 				
+
+				echo $Year." | ".$Semester."<br />";
+				echo $Department."<br />".$CourseFK."<br />";
 				echo $Rubric."<br />";
-				echo $CourseFK."<br />";
-				echo $Year."<br />";
-				echo $Semester."<br />";
-				echo $Department."<br />";
-				
+
+				if ($PerfIndi1 != null) {
+					echo "Performance Indicator: ".$PerfIndi1."<br />";
+					echo "Methods of Assessment and Detailed Performance:<br />";
+					echo $MethOfAsses1."<br />";
+					echo "Use of Results::<br />";
+					echo $UseOfResult1."<br />";
+				}
+				if ($PerfIndi2 != null) {
+					echo "<br />Performance Indicator: ".$PerfIndi2."<br />";
+					echo "Methods of Assessment and Detailed Performance:<br />";
+					echo $MethOfAsses2."<br />";
+					echo "Use of Results::<br />";
+					echo $UseOfResult2."<br />";
+				}
+				if ($PerfIndi3 != null) {
+					echo "<br />Performance Indicator: ".$PerfIndi3."<br />";
+					echo "Methods of Assessment and Detailed Performance:<br />";
+					echo $MethOfAsses3."<br />";
+					echo "Use of Results::<br />";
+					echo $UseOfResult3."<br />";
+				}
+				if ($PerfIndi4 != null) {
+					echo "<br />Performance Indicator: ".$PerfIndi4."<br />";
+					echo "Methods of Assessment and Detailed Performance:<br />";
+					echo $MethOfAsses4."<br />";
+					echo "Use of Results::<br />";
+					echo $UseOfResult4."<br />";
+				}
+				if ($PerfIndi5 != null) {
+					echo "<br />Performance Indicator: ".$PerfIndi5."<br />";
+					echo "Methods of Assessment and Detailed Performance:<br />";
+					echo $MethOfAsses5."<br />";
+					echo "Use of Results::<br />";
+					echo $UseOfResult5."<br />";
+				}
+				if ($PerfIndi6 != null) {
+					echo "<br />Performance Indicator: ".$PerfIndi6."<br />";
+					echo "Methods of Assessment and Detailed Performance:<br />";
+					echo $MethOfAsses6."<br />";
+					echo "Use of Results::<br />";
+					echo $UseOfResult6."<br />";
+				}
+
+
 			?>
 
 				
