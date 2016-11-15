@@ -1,17 +1,17 @@
 <?php
-include ('Session.php');
+include ('session.php');
 ?>
 <html>
 
 	<head>
-		<title>Create Link</title>
-		<link rel="stylesheet" type="text/css" href="Style.css" />	
+		<title>Assignment Menu</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />	
 	</head>
 	
 	<body bgcolor = "#FFFFFF">
 		<div>
          <div style = "width:600px; border: solid 1px #333333; ">
-            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Assignment</b></div>
+            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Assignment Menu</b></div>
 				
             <div style = "margin:30px">
 			<form action="createsendlink.php" method="post">
@@ -57,6 +57,7 @@ include ('Session.php');
 					$rowCount1 = mysqli_num_rows($result5);
 					$FName = $row2['FName'];
 					$LName = $row2['LName'];
+					
 					$CNumber = $row2['CourseNum'];
 					$Dept = $row2['Department'];
 					IF($rowCount1==0){
@@ -82,12 +83,22 @@ include ('Session.php');
 
 							//generate url
 							
-							
 							$url = "EditRubric.php?token=$token";
+							$query6 = "SELECT Email FROM Professor WHERE Id = '$ProfFK'";
+							$result6 = mysqli_query($db,$query6);
+							$row6 = mysqli_fetch_array($result6);
+							$email = $row6['Email'];
+							echo $email;
 							
+							$to = $email;
+							$subject = 'Rubric';
+							$message = "<a href='localhost:/EditRubric.php?token=$token'>Link</a>";
+							$headers = "Content-Type: text/html; charset=ISO-8859-1\r\n";
 							
-							
-							
+							mail ($to, $subject, $message,$headers);
+							  
+							  exit("Email successfully sent");
+
 							
 							
 							// send link via email
@@ -109,7 +120,7 @@ include ('Session.php');
 				<a href="<?php if(isset($url) && ($url!=null)){ echo $url;} else{ echo ""; }; ?>" target="_blank"><?php if(isset($url) && ($url!=null)){ echo $url;} else{ echo ""; }; ?></a>
 				</p>
 			</form>
-				<form action="AssignmentPage.php">
+				<form action="assignment_page.php">
 					<input type="submit" value="Go Back">
 				</form>
 				<!--<div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
