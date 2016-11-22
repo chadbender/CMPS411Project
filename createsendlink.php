@@ -92,8 +92,11 @@ include ('session.php');
 							
 							$to = $email;
 							$subject = 'Rubric';
-							$message = "<a href='localhost:/EditRubric.php?token=$token'>Link</a>";
-							$headers = "Content-Type: text/html; charset=ISO-8859-1\r\n";
+							
+							$headers  = 'MIME-Version: 1.0' . "\r\n";
+							$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+							$headers .= 'From: SELU CMPS Course Assessment' . "\r\n";
+							$message = "<a href='EditRubric.php?token=$token'>Edit Rubric</a>";
 							
 							mail ($to, $subject, $message,$headers);
 							  
