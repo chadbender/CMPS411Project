@@ -81,11 +81,11 @@ INSERT INTO CourseNumber
 INSERT INTO `login`
 	(`UserName`, `PWord`)
 	VALUES 
-	('Nick','password1'), 
-	('chad','password1'), 
-	('neil','password1'), 
-	('miguel','password1'), 
-	('michelle','password1');
+	('Nick','4ebfa0795e91c62cb122febe297ff5f1'), 
+	('chad','4ebfa0795e91c62cb122febe297ff5f1'), 
+	('neil','4ebfa0795e91c62cb122febe297ff5f1'), 
+	('miguel','4ebfa0795e91c62cb122febe297ff5f1'), 
+	('michelle','4ebfa0795e91c62cb122febe297ff5f1');
 INSERT INTO Professor
 	(FName,LName,Email)
     VALUES
